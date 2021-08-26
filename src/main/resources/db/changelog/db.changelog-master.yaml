@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/01-create-table-shop.xml
+  - include:
+      file: db/changelog/02-insert-shops.xml
+  - include:
+      file: db/changelog/03-create-table-discount.xml
+  - include:
+      file: db/changelog/04-create-table-users.xml
+  - include:
+      file: db/changelog/05-create-table-statistics.xml
+  - include:
+      file: db/changelog/06-insert-discounts.xml

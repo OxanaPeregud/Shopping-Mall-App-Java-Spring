@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="02" author="Oxana Peregud">
+        <comment>Inserting shops</comment>
+        <sql>
+            insert into shop (name, description, location, email, mobile)
+            values ('Adidas', 'Premium sport apparel, footwear and accessories', 'Level 2', 'adidas@adidas.com',
+            128734567093);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Skechers', 'Casual canvas slip-ons, sneakers, and running shoes', 'Level 1',
+            'skechers@skechers.com', 122223567011);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Tommy Hilfiger', 'Men and women clothing', 'Level 1', 'hilfiger@hilfiger.com', 122223567011);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Clarks', 'Flip-flops ', 'Level 3', 'clarks@clarks.com', 212567567012);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Levis Outlet', 'Bottoms, Tops, Outerwear and Accessories', 'Level 2', 'levi@levi.com',
+            122143567019);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Reebok Outlet', 'Sneaks and apparel', 'Level 1', 'reebok@reebok.com', 122143567019);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Calvin Klein', 'Apparel, handbags, footwear, underwear, fragrance and home furnishings', 'Level 2',
+            'klein@klein.com', 456143567019);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Polo Ralph Lauren', 'Men, women and kids clothing', 'Level 3', 'lauren@lauren.com', 231122356701);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Columbia Factory Store', 'Summer Footwear', 'Level 2', 'columbia@columbia.com', 227893567019);
+
+            insert into shop (name, description, location, email, mobile)
+            values ('Scrubs and Beyond', 'Scrubs and Medical equipment', 'Level 1', 'scrubs@scrubs.com', 105581567019);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
