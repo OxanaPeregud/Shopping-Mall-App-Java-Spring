@@ -1,0 +1,81 @@
+= Shopping Mall
+
+:spring_boot_version: 2.5.3
+
+== Connect to Database
+
+To connect to PostgreSQL you need to use psql, which is a terminal-based front-end to PostgreSQL.
+It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results.
+
+=== a. Locating psql:
+PostgreSQL is supported on three major platforms. To connect using psql you will first need to locate its location on
+the operating system that you might be using:
+
+==== i. On Linux:
+The easiest way to connect is to check whether you already have psql in your environment variables on not.
+You can try the following command on the terminal:
+----
+[root@localhost data]# which psql
+/usr/bin/psql
+----
+
+This gives you the path, and also, since the OS knows the location, you will not need to browse for it. However,
+if it errors out, you can locate the psql utility by searching for the file with the following command on terminal:
+----
+[root@localhost /]# find / -name psql
+/usr/edb/as11/bin/psql
+----
+
+==== ii. On Windows:
+On Windows, you can find psql in the Program Files, and you should be able to launch it in a command prompt simply by
+clicking on it.
+
+==== iii. On Mac:
+On a Mac you should be able to locate psql under the Applications > PostgreSQL (version number) > SQL Shell (psql).
+
+=== b. Connecting psql:
+Now that we have located psql, we need to understand what it requires to connect to the database.
+The basic parameters on any of the platforms are as follows:
+
+==== Server [localhost]:
+This is the address for the server. You can use an IP address or the hostname of the machine on which database
+server is running. If you do not give any value, by default it is localhost.
+
+==== Database [postgres]:
+The name of the database with which you want to connect. The default name of the database is the same as that
+of the user. (If you are using Advanced Server, the default name would be edb.)
+
+==== Port [5432]:
+This is the port on which you have configured your instance while installing or initializing.
+The default port is 5432. (If you are using Advanced Server this would be 5444.)
+
+==== Username [postgres]:
+This is the username that is created while the installation takes place. The default username for postgres is postgres.
+(If you are using Advanced Server it is enterprisedb.)
+
+On a Mac or Windows, you are able to connect to the default instance by simply hitting enter at the shell or
+command prompt when trying to run psql and keying in the password.
+
+On Linux, you will explicitly need to pass these parameters at the shell:
+
+For PostgreSQL:
+----
+-bash-4.2$ psql -d postgres -U postgres
+----
+For Advanced Server:
+----
+-bash-4.2$ psql -d edb -U enterprisedb
+----
+If connecting to a remote server from any of the operating systems, you can pass on the specific parameters in the
+following format:
+----
+bash-4.2$ psql -h <hostname or ip address> -p <port number of remote machine> -d <database name which you want to connect> -U <username of the database server>
+----
+
+== Run the Application
+
+To run the application, run the following command in a terminal window (in the `complete`)
+directory:
+----
+gradlew bootRun -Pargs="--server.port=8181"
+----

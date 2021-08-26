@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="06" author="Oxana Peregud">
+        <comment>Inserting discounts</comment>
+        <sql>
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (10, '2021-08-25', '2021-08-30', 1);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (15, '2021-09-01', '2021-09-10', 1);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (60, '2021-08-20', '2021-09-11', 1);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (30, '2021-08-25', '2021-09-15', 2);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (35, '2021-08-20', '2021-09-11', 2);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (45, '2021-08-27', '2021-09-28', 3);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (35, '2021-08-20', '2021-09-11', 4);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (60, '2021-08-20', '2021-09-11', 5);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (45, '2021-08-20', '2021-09-11', 6);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (10, '2021-08-25', '2021-08-30', 7);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (15, '2021-09-01', '2021-09-10', 7);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (45, '2021-08-27', '2021-09-28', 7);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (45, '2021-08-20', '2021-09-11', 8);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (10, '2021-08-25', '2021-08-30', 9);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (30, '2021-08-25', '2021-09-15', 10);
+
+            insert into discount (discount, start_date, end_date, shop_id)
+            values (10, '2021-08-25', '2021-08-30', 10);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
